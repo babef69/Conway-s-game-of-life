@@ -14,7 +14,6 @@ def show_grid(grid):
 show_grid(grid)    
             
 def dead_or_alive(grid):
-    new_grid = [[0 for i in range(size)]for i in range(size)]
     for x in range(size):
         for y in range(size):
             alive_neighbors = 0
@@ -26,8 +25,6 @@ def dead_or_alive(grid):
                         continue
                     if 0 <= x + dx < size and 0 <= y + dy < size and grid[x + dx][y + dy] == 1:
                         alive_neighbors += 1
-            
-            
             
             if grid[x][y] ==1:
                 if alive_neighbors <2 or alive_neighbors > 3:
